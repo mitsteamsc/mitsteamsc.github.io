@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Welcome — Student Company</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <a id="brand-link" href="#">StudentCo</a>
+      </div>
+      <nav class="menu">
+        <a href="#products" id="menu-products">Products</a>
+        <a href="#about" id="menu-about">About</a>
+        <a href="#" id="edit-toggle">Edit Site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <h1 id="hero-title">Welcome to my website</h1>
+        <p id="hero-sub">We build things students love.</p>
+        <div class="cta">
+          <a id="primary-cta" class="btn" href="#products">See Products</a>
+          <a id="secondary-cta" class="btn btn-outline" href="#about">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <h2>Our Products</h2>
+        <div id="products-grid" class="grid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p id="about-text">We're a student-run team building great stuff. Edit this text to introduce your company.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div id="footer-text">© <span id="footer-year"></span> StudentCo</div>
+      <div class="social">
+        <a id="footer-link" href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Editor modal (simple) -->
+  <div id="editor" class="editor hidden" aria-hidden="true">
+    <div class="editor-panel">
+      <h3>Edit Site Content</h3>
+      <label>Brand name
+        <input id="edit-brand" type="text" />
+      </label>
+      <label>Hero title
+        <input id="edit-hero-title" type="text" />
+      </label>
+      <label>Hero subtitle
+        <input id="edit-hero-sub" type="text" />
+      </label>
+      <label>About text
+        <textarea id="edit-about" rows="4"></textarea>
+      </label>
+      <h4>Products (edit JSON)</h4>
+      <textarea id="edit-products" rows="10"></textarea>
+      <div class="editor-actions">
+        <button id="save-local" class="btn">Save (local)</button>
+        <button id="apply-changes" class="btn btn-primary">Apply</button>
+        <button id="close-editor" class="btn btn-outline">Close</button>
+      </div>
+      <p class="hint">Local saves use your browser. To publish, copy content into <code>data/data.json</code> in the repo.</p>
+    </div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
